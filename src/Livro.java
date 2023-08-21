@@ -3,6 +3,18 @@ public class Livro {
     private String nome, autor, isbn, anoDePublicacao, editora, prateleira, secao, cdd;
     private int edicao;
 
+    public Livro(String nome, String autor, String isbn, String anoDePublicacao, String editora, String prateleira, String secao, String cdd, int edicao) {
+        this.nome = nome;
+        this.autor = autor;
+        this.isbn = isbn;
+        this.anoDePublicacao = anoDePublicacao;
+        this.editora = editora;
+        this.prateleira = prateleira;
+        this.secao = secao;
+        this.cdd = cdd;
+        this.edicao = edicao;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -74,4 +86,5 @@ public class Livro {
     public void setEdicao(int edicao) {
         this.edicao = edicao;
     }
+
 }
