@@ -11,12 +11,13 @@ public  class Main {
 
         do {
             System.out.println("1- Cadastrar livro:");
-            System.out.println("2- Proucurar livro: ");
-            System.out.println("3- Listar livro: ");
-            System.out.println("4- Quantidade cadastrada de livros: ");
-            System.out.println("5- Excluir ultimio livro da lista");
-            System.out.println("6- Ordenar livros cadastrados");
-            System.out.println("7- Encerrar programa");
+            System.out.println("2- Cadastrar uma revista: ");
+            System.out.println("3- Proucurar um livro: ");
+            System.out.println("4-  Listar um livro: ");
+            System.out.println("5- Quantidade cadastrada de livros: ");
+            System.out.println("6- Excluir ultimio livro da lista");
+            System.out.println("7- Ordenar livros cadastrados");
+            System.out.println("8- Encerrar programa");
             retorno =inp.next();
 
 
@@ -47,11 +48,37 @@ public  class Main {
                     break;
 
                 case "4":
+                    for(int i =0;  i<controle; i++){
+                        System.out.println("livro " + (i+1) + ":"
+                                + " nome: " + livro[i].getNome() + " / "
+                                + " autor: " + livro[i].getAutor() + " / "
+                                + " ISBN: " + livro[i].getIsbn() + " / "
+                                + " ano de publicação: " +  livro[i].getAnoDePublicacao() + " / "
+                                + " Editora: " + livro[i].getEditora() + " / "
+                                + " prateleira: "  + livro[i].getPrateleira() + " / "
+                                + " seção: "  + livro[i].getSecao() + " / "
+                                + " CDD: " + livro[i].getCdd() + " / "
+                                + " Edição: " + livro[i].getEdicao() + " / ");
+
+                    }
+                    break;
+
+                case "5":
                     System.out.println("total = 1000");
                     System.out.println("Usado = " + controle);
                     System.out.println("Livre ="+ (1000 - controle));
+
+                    break;
+
+                case "6":
+                    if(controle>0)
+                        controle--;
+                    else{
+                        System.out.println("Não existe nenhum livro cadastrado");
+                    }
+
             }
 
-        } while (!retorno.equals("7"));
+        } while (!retorno.equals("8"));
     }
 }
