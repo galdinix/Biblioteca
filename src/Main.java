@@ -1,11 +1,10 @@
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
-public  class Main {
 
-
+public class Main {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         Livro livro[] = new Livro[999];
+        Revista revistas[] = new Revista[1000];
         String retorno;
         int controle = 0;
 
@@ -47,6 +46,7 @@ public  class Main {
                     controle++;
                     break;
 
+
                 case "4":
                     for(int i =0;  i<controle; i++){
                         System.out.println("livro " + (i+1) + ":"
@@ -76,6 +76,8 @@ public  class Main {
                     else{
                         System.out.println("Não existe nenhum livro cadastrado");
                     }
+
+
 
             }
 
