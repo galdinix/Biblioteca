@@ -3,6 +3,11 @@ public class Livro {
     private String nome, autor, isbn, anoDePublicacao, editora, prateleira, secao, cdd;
     private int edicao;
 
+
+    public Livro() {
+
+    }
+
     public Livro(String nome, String autor, String isbn, String anoDePublicacao, String editora, String prateleira, String secao, String cdd, int edicao) {
         this.nome = nome;
         this.autor = autor;
